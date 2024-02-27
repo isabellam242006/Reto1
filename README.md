@@ -84,6 +84,8 @@ if __name__ == "__main__":
         print("No hay números primos en la lista dada")
 ```
 4.Escribir una función que reciba una lista de números enteros y retorne la mayor suma entre dos elementos consecutivos.
+Primero se establece mayor suma a la sumna de los dos primeros elementos de la lista. Luego se suman los siguientes elementos y así sucesivamente utilizando el índice de i y i + 1 para iterar. En caso de que la siguiente suma sea mayor que la anterior, se establece la más reciente como "mayor suma" y así hasta completar todos los números de la lista.
+
 ```python
 def mayor_suma(lista):
     mayor_suma = lista[0] + lista[1]
@@ -107,6 +109,8 @@ if __name__ == "__main__":
     print("La mayor suma entre dos números consecutivos es ", mayor_suma(lista))
 ```
 5.Escribir una función que reciba una lista de string y retorne unicamente aquellos elementos que tengan los mismos caracteres. e.g. entrada: ["amor", "roma", "perro"], salida ["amor", "roma"]
+
+Se utiliza un ciclo for aninado para comparar todas las palabras entre sí. Si ambas palabras son distintas y al organizar las letras con "sorted", se tienen las mismas letras y en la misma cantidad, entonces se añaden a una lista creada llamada lista_anagramas.
 
 ```python
 def anagrama(lista_palabras):
