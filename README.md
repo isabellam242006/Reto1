@@ -84,6 +84,7 @@ if __name__ == "__main__":
         print("No hay números primos en la lista dada")
 ```
 4.Escribir una función que reciba una lista de números enteros y retorne la mayor suma entre dos elementos consecutivos.
+
 Primero se establece mayor suma a la sumna de los dos primeros elementos de la lista. Luego se suman los siguientes elementos y así sucesivamente utilizando el índice de i y i + 1 para iterar. En caso de que la siguiente suma sea mayor que la anterior, se establece la más reciente como "mayor suma" y así hasta completar todos los números de la lista.
 
 ```python
