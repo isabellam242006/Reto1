@@ -83,3 +83,52 @@ if __name__ == "__main__":
     else:
         print("No hay números primos en la lista dada")
 ```
+4.Escribir una función que reciba una lista de números enteros y retorne la mayor suma entre dos elementos consecutivos.
+```python
+def mayor_suma(lista):
+    mayor_suma = lista[0] + lista[1]
+    for i in range(1, len(lista)-1):
+        siguiente_suma = lista[i] + lista[i+1]     
+        if siguiente_suma > mayor_suma:
+            mayor_suma = siguiente_suma
+    
+    return mayor_suma
+
+
+if __name__ == "__main__":
+    lista = []
+    while True:
+        numeros = input("Ingrese un número entero cualquiera (Vacío para terminar): ")
+        if numeros == "":
+            break
+        numeros = int(numeros)
+        lista.append(numeros)
+    
+    print("La mayor suma entre dos números consecutivos es ", mayor_suma(lista))
+```
+5.Escribir una función que reciba una lista de string y retorne unicamente aquellos elementos que tengan los mismos caracteres. e.g. entrada: ["amor", "roma", "perro"], salida ["amor", "roma"]
+
+```python
+def anagrama(lista_palabras):
+    lista_anagramas = []
+    for palabra1 in lista_palabras:
+        for palabra2 in lista_palabras:
+            if palabra1 != palabra2 and sorted(palabra1) == sorted(palabra2):
+                lista_anagramas.append(palabra1)
+                lista_anagramas.append(palabra2)
+    return lista_anagramas
+
+if __name__ == "__main__":            
+    lista_palabras = []
+    while True:
+        palabra = input("Ingrese una palabra cualquiera (Vacío para terminar): ")
+        if palabra == "":
+            break
+        lista_palabras.append(palabra)
+    
+    anagramas = anagrama(lista_palabras)
+    if anagramas:
+        print("Las palabras que son anagramas entre sí son:", anagramas)
+    else:
+        print("No hay anagramas en la lista de palabras.")
+```
